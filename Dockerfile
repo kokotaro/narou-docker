@@ -30,6 +30,7 @@ COPY init.sh /usr/local/bin
 
 ENV JAVA_HOME=/opt/jre
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV NAROU_PORT=33000
 
 RUN addgroup -g ${GID} narou && \
     adduser -u ${UID} -G narou -D narou && \
@@ -42,4 +43,4 @@ WORKDIR /home/narou/novel
 EXPOSE 33000-33001
 
 ENTRYPOINT ["init.sh"]
-CMD ["narou", "web", "-np", "33000"]
+CMD ["narou", "web", "-np", "${NAROU_PORT}"]

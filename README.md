@@ -12,15 +12,13 @@ Narou.rb を Docker で実行するための Docker イメージ<br>
 
 # 使い方
 
-最低限以下のファイルを同じディレクトリに保管し、コマンドを実行
-
-- Dockerfile
-- docker-compose.yml
-- init.sh
-
-```sh
-$ docker compose up -d
+```
+docker run -it --name narou \
+  -e NAROU_PORT=33000 \
+  -p 33000:33000 \
+  haoling/narou:3.9.0
 ```
 
 自動的に WEB UI が起動します。<br>
-http://localhost:9200/ にアクセスしてください。
+http://localhost:33000/<br>
+にアクセスしてください。
