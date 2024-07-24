@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image Build and Push
 
 on:
   workflow_dispatch:
@@ -22,4 +22,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file dockerfile --tag haoling/narou:${NAROU_VERSION} --build-args NAROU_VERSION=${NAROU_VERSION}
+      run: docker build . --tag haoling/narou:${NAROU_VERSION} --build-arg NAROU_VERSION=${NAROU_VERSION}
