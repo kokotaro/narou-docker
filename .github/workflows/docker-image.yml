@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      NAROU_VERSION:
+        type: text
+        required: true
+        description: narouのバージョン https://rubygems.org/gems/narou/versions
+      AOZORAEPUB3_VERSION:
+        type: text
+        required: true
+        default: 1.1.1b24Q
+      
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file dockerfile --tag haoling/narou:${NAROU_VERSION} --build-args NAROU_VERSION=${NAROU_VERSION}
