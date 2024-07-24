@@ -33,6 +33,6 @@ jobs:
       with:
         push: true
         tags: haoling/narou:${{ inputs.NAROU_VERSION }}
-        build-args:
-          NAROU_VERSION: ${{ inputs.NAROU_VERSION }}
-          AOZORAEPUB3_VERSION: ${{ inputs.AOZORAEPUB3_VERSION }}
+        build-args: |
+          NAROU_VERSION=${{ inputs.NAROU_VERSION }}
+          AOZORAEPUB3_VERSION=${{ inputs.AOZORAEPUB3_VERSION }}
