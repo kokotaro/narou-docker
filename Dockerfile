@@ -20,6 +20,8 @@ RUN gem install narou -v ${NAROU_VERSION} --no-document && \
     unzip ${AOZORAEPUB3_FILE} -d ${AOZORAEPUB3_FILE} && \
     mv ${AOZORAEPUB3_FILE} /opt/aozoraepub3 
 
+COPY --from=builder /usr/local/bundle /usr/local/bundle
+COPY --from=builder /opt/aozoraepub3 /opt/aozoraepub3
 COPY --from=jre /opt/jre /opt/jre
 COPY --from=jre /usr/lib/libjpeg* /usr/lib/
 COPY init.sh /usr/local/bin
