@@ -6,7 +6,7 @@ RUN apk update && \
     --add-modules java.base,java.datatransfer,java.desktop \
     --output /opt/jre
 
-FROM ruby:3.3.4-bullseye
+FROM ruby:3.3.4-alpine
 
 ARG NAROU_VERSION=3.9.0
 ARG AOZORAEPUB3_VERSION=1.1.1b24Q
