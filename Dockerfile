@@ -48,4 +48,4 @@ WORKDIR /home/narou/novel
 EXPOSE 33000-33001
 
 ENTRYPOINT ["init.sh"]
-CMD ["narou", "web", "-np", "${NAROU_PORT}"]
+CMD ["narou", "web"]

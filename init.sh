@@ -7,7 +7,7 @@ if [ ! -e /home/narou/novel/.narou ]; then
     echo "---";
     echo 'aozoraepub3dir: "/opt/aozoraepub3"';
     echo 'over18: true';
-    echo 'server-port: 33000';
+    echo "server-port: ${NAROU_PORT}";
     echo 'server-bind: 0.0.0.0';
   } | tee .narousetting/global_setting.yaml
 
