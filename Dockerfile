@@ -2,7 +2,8 @@ FROM ruby:3.3.1-alpine3.19 as builder1
 
 ARG NAROU_VERSION=3.9.0
 
-RUN gem install narou -v ${NAROU_VERSION} --no-document
+RUN apk add make g++ && \
+    gem install narou -v ${NAROU_VERSION} --no-document
 
 FROM ruby:3.3.1-bookworm as builder2
 
