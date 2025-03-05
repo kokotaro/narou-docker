@@ -15,19 +15,19 @@ sitename: |-
   <th>掲載サイト</th>
   <td>(?<sitename>.+?)\(.+\)</td>
 
-version: 2.0
+version: 2.1
 
 # ------------------------------------------------------------
 # 目次取得設定
 toc_url: https://\\k<domain>/\\k<ncode>/
 subtitles: |-
   (?:<div class="p-eplist__chapter-title">(?<chapter>.+?)</div>
-  
+
   )?<div class="p-eplist__sublist">
   <a href="(?<href>/.+?/(?<index>\d+?)/)" class="p-eplist__subtitle">
   (?<subtitle>.+?)
   </a>
-  
+
   <div class="p-eplist__update">
   (?:<span class="p-eplist__favep">.+?</span></span>)?(?<subdate>.+?)
   (?:<span title="(?<subupdate>.+?) 改稿">（<u>改</u>）</span>
