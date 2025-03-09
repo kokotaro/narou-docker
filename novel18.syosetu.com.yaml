@@ -12,8 +12,8 @@ cookie: over18=yes
 
 # 掲載サイト名は動的に取得する
 sitename: |-
-  <th>掲載サイト</th>
-  <td>(?<sitename>.+?)\(.+\)</td>
+  <dt class="p-infotop-data__title">掲載サイト</dt>
+  <dd class="p-infotop-data__value">(?<sitename>.+?)\(.+\)</dd>
 
 version: 2.1
 
